@@ -1,0 +1,107 @@
+:root {
+    --corPrincipal: #f0eded;
+    --corSecundaria: #553647;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    display: grid;
+    height: 100svh;
+    place-content: center;
+}
+
+.modalContainer {
+    width: 100vw;
+    height: 100svh;
+    background: #16161650;
+    display: none;
+    place-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.modalContainer.mostrar {
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+
+.modal {
+    animation: modal 0.5s;
+    border: 5px solid var(--corSecundaria);
+    box-shadow: 0 0 0 5px var(--corPrincipal);
+    width: 60%;
+    min-width: 300px;
+    background-color: var(--corPrincipal);
+    padding: 2em;
+    position: relative;
+}
+
+h3 {
+    font-size: 1.6rem;
+    padding: 10px;
+    text-indent: 25px;
+}
+
+.formulario {
+    display: grid;
+    gap: 20px;
+}
+
+.inputEmail {
+    padding: 5px 10px;
+    font-size: 2rem;
+    background-color: var(--corPrincipal);
+    outline: none;
+    border: none;
+    border-bottom: 5px solid #553647;
+}
+
+.buttonCad {
+    width: 7.5em;
+    font-size: 2rem;
+    background-color: var(--corPrincipal);
+    outline: none;
+    border: 2px solid var(--corSecundaria);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttonCad:hover {
+    background-color: #e2dddd8e;
+}
+.fecharModal {
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    text-align: center;
+    font-size: 1.2em;
+    outline: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--corSecundaria);
+    border: 5px solid var(--corPrincipal);
+    color: var(--corPrincipal);
+    box-shadow: 0 0 4px #16161650;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
