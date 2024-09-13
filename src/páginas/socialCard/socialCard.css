@@ -1,7 +1,7 @@
 :root {
     --corBackground: #e0e0e0;
-    /* --corBa: #e0e0e0; */
-    --corSecundaria: #553647;
+    --corTexto: #363636;
+    --corBranca: #fbfbfb;
 }
 
 * {
@@ -21,13 +21,163 @@ body {
 }
 
 .main {
-    height: 50%;
-    width: 65%;
-    background-color: #fbfbfb;
+    height: 50svh;
+    width: 75vw;
+    background-color: var(--corBranca);
     box-shadow: 0 0 10px #00000050;
     display: flex;
     position: relative;
     padding: 3em;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 15px;
+}
+
+.card {
+    display: flex;
+    flex: 0.6;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: var(--corTexto);
+    background-color: var(--corBranca);
+    padding: 10em 5em;
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.card.isActive {
+    clip-path: circle(1000%);
+    transition-delay: 0s;
+    z-index: 1;
+}
+
+.card:not(.is-active) {
+    transition-delay: 205ms;
+}
+
+.cardInstagram {
+    background-color: #e4405f;
+    color: var(--corBranca);
+    clip-path: circle(0% at rem-calc(600) 90%);
+
+    .cardButton {
+        background-color: #4f5bd5;
+    }
+
+    .cardButton:hover {
+        background-color: #5a66e6;
+    }
+}
+.cardLinkedin {
+    background-color: #0077b5;
+    color: var(--corBranca);
+    clip-path: circle(0% at rem-calc(660) 90%);
+
+    .cardButton {
+        color: var(--corTexto);
+        background-color: var(--corBranca);
+    }
+
+    .cardButton:hover {
+        background-color: #e0e0e0;
+    }
+}
+.cardGithub {
+    background-color: #333;
+    color: var(--corBranca);
+    clip-path: circle(0% at rem-calc(725) 90%);
+
+    .cardButton {
+        color: var(--corTexto);
+        background-color: var(--corBranca);
+    }
+
+    .cardButton:hover {
+        background-color: #e0e0e0;
+    }
+}
+
+.cardTitle {
+    font-weight: normal;
+    line-height: 1;
+}
+
+.titleEmphasis {
+    display: inline-block;
+    flex: 1;
+    font-size: 210%;
+    font-weight: bold;
+    width: 100%;
+}
+
+.cardExplanation {
+    line-height: 1.6;
+    margin: 30px 0;
+}
+
+.cardButton {
+    display: inline-block;
+    padding: 0.7em 2em;
+    max-width: 25em;
+    border-radius: 50px;
+    color: var(--corBranca);
+    background-color: #3da6c8;
+    text-align: center;
+    text-decoration: none;
+    transition: all 90ms ease-in;
+}
+
+.cardButton:hover {
+    background-color: #3593b0;
+    transition: all 90ms ease-out;
+}
+
+.cardButton:active {
+    transform: translateY(0.25em);
+}
+
+.menu {
+    display: flex;
+    align-items: flex-end;
+    list-style-type: none;
+    height: 100%;
+    padding: 0 25px 15px;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+.menuItem {
+    margin-left: 25px;
+    z-index: 200;
+}
+
+.menuItemIndex {
+    position: absolute;
+    right: 25px;
+    top: 65px;
+}
+
+.menuToggle {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    bottom: 25px;
+    right: 25px;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.isBtnActive {
+    fill: var(--corBranca);
+    pointer-events: none;
+}
+
+svg {
+    width: 30px;
 }
