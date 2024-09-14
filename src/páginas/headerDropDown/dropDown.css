@@ -1,0 +1,99 @@
+:root {
+    --corBackground: #13101d;
+    --corHeader: #edeaf5;
+    --corFont: #222;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background: var(--corBackground) url('./image/background.jpg') center /
+        cover no-repeat fixed;
+    width: 100vw;
+}
+
+.navBar {
+    background-color: var(--corHeader);
+    border-radius: 10px;
+    width: 95%;
+    margin: 25px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+}
+
+.navBar .logo {
+    font-size: 1.8em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--corFont);
+    text-decoration: none;
+}
+
+.navBar .navMenu {
+    display: flex;
+    list-style: none;
+    position: relative;
+}
+
+.navBar .navMenu .navItem a {
+    height: 100%;
+    display: block;
+    color: var(--corFont);
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.navBar .navMenu .navItem:hover a {
+    color: var(--corHeader);
+    background: var(--corBackground);
+}
+
+.navBar .navMenu .navItem a i {
+    rotate: 0deg;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.navBar .navMenu .navItem:hover a i {
+    rotate: -180deg;
+}
+
+.navBar .navMenu .navItem ul {
+    position: absolute;
+    list-style: none;
+    display: block;
+    padding-top: 10px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in;
+}
+
+.navBar .navMenu .navItem:hover ul {
+    height: calc(400% + 10px);
+}
+
+.navBar .navMenu .navItem ul li a {
+    display: none;
+}
+
+.navBar .navMenu .navItem:hover ul li a {
+    color: var(--corFont);
+    background: var(--corHeader);
+    display: block;
+}
+
+.navBar .navMenu .navItem ul li a:hover {
+    background-color: #c5c1c1;
+}
