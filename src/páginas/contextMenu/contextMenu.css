@@ -1,0 +1,221 @@
+:root {
+    --corBackground: #5739bb;
+    --corHeader: #edeaf5;
+    --corFont: #222;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background: var(--corBackground) url('./image/background.jpg') center /
+        cover no-repeat fixed;
+    width: 100vw;
+}
+
+.navBar {
+    background-color: var(--corHeader);
+    border-radius: 10px;
+    width: 95%;
+    margin: 25px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+}
+
+.navBar .logo {
+    font-size: 1.8em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--corFont);
+    text-decoration: none;
+}
+
+.navBar .navMenu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    position: relative;
+}
+
+.navBar .navMenu .navItem .linkMenu {
+    height: 100%;
+    display: block;
+    color: var(--corFont);
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.navBar .navMenu .navItem .linkMenu:hover {
+    background: #c2c1c1;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.navBar .navMenu .navItem .contextMenu {
+    max-height: 100%;
+    position: relative;
+}
+
+.navBar .navMenu .navItem .contextMenu .iconSummary .iconUser {
+    height: 60%;
+    padding: 0 20px;
+    transition: 0.3s ease;
+}
+.navBar .navMenu .navItem .contextMenu .iconSummary:hover {
+    background: #c2c1c1;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.navBar .navMenu .navItem .contextMenu .iconSummary,
+.textSummary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.navBar .navMenu .navItem .contextMenu .options {
+    background: var(--corHeader);
+    box-shadow: 5px 5px 4px #16161650;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    list-style: none;
+    width: max-content;
+}
+
+.navBar .navMenu .navItem .contextMenu .options li {
+    cursor: pointer;
+    padding: 5px 15px;
+    width: 100%;
+    display: block;
+    color: var(--corFont);
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 500;
+    transition: 0.3s ease;
+    font-size: 22px;
+}
+
+.navBar .navMenu .navItem .contextMenu .options li:hover {
+    background: #c2c1c1;
+    border-radius: 5px;
+}
+
+/* Card */
+
+main {
+    height: 90svh;
+    display: grid;
+    place-content: center;
+}
+
+main .card {
+    background: var(--corHeader);
+    padding: 10px 10px 5px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+main .card .imgProduct {
+    width: 100%;
+    border-radius: 10px;
+}
+
+main .card .name {
+    color: var(--corFont);
+    margin-bottom: 30px;
+    text-indent: 10px;
+}
+
+main .card .content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+main .card .content .price {
+    color: var(--corBackground);
+    font-weight: 800;
+    font-size: 1.6rem;
+}
+
+main .card .content .directional {
+    display: flex;
+    gap: 5px;
+}
+
+main .card .content .directional button {
+    border: 1px solid #aba7a766;
+    padding: 5px;
+    border-radius: 5px;
+    height: 35px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+main .card .content .directional button:hover {
+    background: #c2c1c1;
+}
+
+main .card .content .directional details summary {
+    list-style: none;
+}
+
+main .card .content .directional details summary .imgElipse {
+    border: 1px solid #aba7a766;
+    height: 35px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+main .card .content .directional details summary:hover .imgElipse {
+    background: #c2c1c1;
+}
+
+main .card .content .directional details ul {
+    position: absolute;
+    background: var(--corHeader);
+    border: 1px solid #aba7a766;
+    box-shadow: 0 10px 50px #3c3e4555;
+    list-style: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+main .card .content .directional details ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 160px;
+    color: var(--corFont);
+}
+
+main .card .content .directional details ul li:hover {
+    background: #c2c1c1;
+}
+
+main .card .content .directional details ul li img {
+    height: 25px;
+}
