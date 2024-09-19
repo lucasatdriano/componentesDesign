@@ -67,8 +67,8 @@ body {
     position: relative;
 }
 
-.navBar .navMenu .navItem .contextMenu .iconSummary .iconUser {
-    height: 60%;
+.navBar .navMenu .navItem .contextMenu .iconSummary i {
+    font-size: 2rem;
     padding: 0 20px;
     transition: 0.3s ease;
 }
@@ -164,7 +164,8 @@ main .card .content .directional {
 
 main .card .content .directional button {
     border: 1px solid #aba7a766;
-    padding: 5px;
+    padding: 2.5px 5px;
+    width: max-content;
     border-radius: 5px;
     height: 35px;
     cursor: pointer;
@@ -181,8 +182,8 @@ main .card .content .directional details summary {
 
 main .card .content .directional details summary .imgElipse {
     border: 1px solid #aba7a766;
-    height: 35px;
-    padding: 5px;
+    font-size: 1.8rem;
+    padding: 2.5px 15px;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s ease;
@@ -199,23 +200,29 @@ main .card .content .directional details ul {
     box-shadow: 0 10px 50px #3c3e4555;
     list-style: none;
     padding: 10px;
+    display: grid;
     border-radius: 10px;
 }
 
 main .card .content .directional details ul li {
-    display: flex;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    grid-template-rows: 40px;
+    gap: 25px;
     align-items: center;
-    gap: 5px;
-    padding: 10px;
+    justify-content: center;
+    padding: 5px 10px;
     cursor: pointer;
     width: 160px;
     color: var(--corFont);
+    transition: 0.3s ease;
 }
 
 main .card .content .directional details ul li:hover {
     background: #c2c1c1;
 }
 
-main .card .content .directional details ul li img {
-    height: 25px;
+main .card .content .directional details ul li i {
+    font-size: 1.6rem;
+    text-align: center;
 }

@@ -1,0 +1,184 @@
+:root {
+    --corBackground: #161623;
+    --corFont: #141414;
+    --corCard: #f0e7e7;
+    --corPrincipal: #c70039;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100svh;
+    background-color: var(--corBackground);
+    color: var(--corCard);
+}
+
+h1 {
+    padding: 15px 0;
+    user-select: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    color: var(--corFont);
+    background-color: var(--corCard);
+    position: relative;
+    border-radius: 10px;
+    padding-top: 40px;
+    overflow: hidden;
+    transition: 0.3 ease;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 40px;
+}
+
+.menu i {
+    font-size: 1.7em;
+    cursor: pointer;
+}
+
+input {
+    display: none;
+}
+
+label i.fa-regular {
+    position: absolute;
+    right: 35px;
+}
+
+label .fa-sun {
+    display: none;
+}
+
+#toggleTheme:checked ~ .container .menu label .fa-sun {
+    display: block;
+}
+
+#toggleTheme:checked ~ .container .menu label .fa-moon {
+    display: none;
+}
+
+#toggleTheme:checked + label + body {
+    background-color: #fff;
+}
+
+#toggleTheme:checked ~ .container {
+    color: var(--corCard);
+    background-color: var(--corFont);
+}
+
+.user {
+    position: relative;
+    height: 230px;
+    width: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.user::after {
+    position: absolute;
+    content: '';
+    height: 245px;
+    width: 245px;
+    border: 5px solid var(--corPrincipal);
+    border-radius: 50%;
+    top: -12px;
+    left: -12px;
+}
+
+.user img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.username {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 2.8em;
+    opacity: 0.9;
+}
+
+.departmentTag {
+    font-size: 1.2em;
+    text-align: center;
+    opacity: 0.6;
+}
+
+.getInTouch {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 80px;
+}
+
+i.fa-brands {
+    font-size: 2.4em;
+    margin: 0 25px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+i.fa-brands:hover {
+    color: var(--corPrincipal);
+}
+
+.downPart {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: var(--corPrincipal);
+    border-radius: 30px 30px 0 0;
+}
+
+button {
+    position: relative;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    color: var(--corCard);
+    background-color: var(--corPrincipal);
+    left: 50%;
+    transform: translateX(-50%);
+    top: -15%;
+    cursor: pointer;
+    box-shadow: 0 15px 20px #0e0d0d80;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    left: 52%;
+    transform: scale(1.1) translateX(-50%);
+}
+
+.textHire {
+    text-align: center;
+    font-size: 1.5em;
+    opacity: 0.8;
+    color: var(--corCard);
+}
+
+.downPart i {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    top: 10px;
+    position: relative;
+    color: var(--corCard);
+    cursor: pointer;
+}

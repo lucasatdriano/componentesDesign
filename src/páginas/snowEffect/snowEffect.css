@@ -1,0 +1,89 @@
+:root {
+    --corBackground: linear-gradient(#9800ce, #651781);
+    --corFont: #141414;
+    --corCard: #f0e7e7;
+    --corPrincipal: #c70039;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100svh;
+    background: var(--corBackground);
+    color: var(--corCard);
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    height: 100svh;
+    width: 100vw;
+}
+
+.moon {
+    position: absolute;
+    content: '';
+    background-color: var(--corCard);
+    width: 400px;
+    height: 400px;
+    z-index: -1;
+    border-radius: 50%;
+    top: 35%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.moon::after {
+    position: absolute;
+    content: '';
+    inset: -220px;
+    background: url('./images/santaClaus.png') center / 600px no-repeat fixed;
+    animation: flutuar 4s linear infinite;
+}
+
+.imgTree {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    user-select: none;
+    z-index: 999;
+}
+
+@keyframes flutuar {
+    0%,
+    100% {
+        transform: translateY(-25px);
+    }
+    50% {
+        transform: translateY(25px);
+    }
+}
+
+.snow {
+    display: flex;
+}
+
+.snow span {
+    position: relative;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin: 0 1vw;
+    box-shadow: -100px 20px 5px #ebe6e6, -100px 20px 10px #ebe6e6;
+    animation: animateSnow calc(75s / var(--i)) linear infinite;
+}
+
+@keyframes animateSnow {
+    0% {
+        transform: translateY(-10vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}

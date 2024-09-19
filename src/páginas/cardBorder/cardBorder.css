@@ -1,0 +1,108 @@
+:root {
+    --corBackground: #161623;
+    --corFont: #e7e2e2;
+    --corCard: #222;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100svh;
+    background-color: var(--corBackground);
+    color: var(--corFont);
+}
+
+h1 {
+    padding: 15px 0;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+.card {
+    display: grid;
+    place-items: center;
+    position: relative;
+    height: 30em;
+    width: 20em;
+    background-color: var(--corCard);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+i {
+    color: #fefefe1a;
+    font-size: 10em;
+    z-index: 10;
+}
+
+.borderColorful::before {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    content: '';
+    height: 30em;
+    width: 20em;
+    background-color: #f00707;
+    border-radius: 15px;
+    z-index: -1;
+    transition: 0.3s ease;
+    animation: animateColorfulBorder 2s linear infinite;
+}
+
+.borderColorful:hover::before {
+    height: 30.5em;
+    width: 20.5em;
+}
+
+@keyframes animateColorfulBorder {
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.borderLoop {
+    overflow: hidden;
+}
+
+.borderLoop::before {
+    position: absolute;
+    content: '';
+    height: 50%;
+    width: 180%;
+    background-color: var(--corFont);
+    transform: rotate(45deg);
+}
+
+.borderLoop:hover::before {
+    animation: animateLoopBorder 25s linear infinite;
+}
+
+@keyframes animateLoopBorder {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(3600deg);
+    }
+}
+
+.borderLoop::after {
+    position: absolute;
+    content: '';
+    inset: 5px;
+    background-color: var(--corCard);
+    border-radius: 8px;
+}
