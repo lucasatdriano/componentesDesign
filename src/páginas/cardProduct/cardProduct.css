@@ -1,0 +1,150 @@
+:root {
+    --corBackground: #161623;
+    --corFont: #222;
+    --corCard: #f3efef;
+    --corPrincipal: #1376a8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100svh;
+    background-color: var(--corPrincipal);
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    background-color: var(--corCard);
+    max-width: 800px;
+    height: 500px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+.container .imgBox {
+    width: 50%;
+    position: relative;
+    background-color: var(--corFont);
+    opacity: 0.9;
+    border-radius: 10px 0 0 10px;
+}
+
+.container .imgBox::after {
+    position: absolute;
+    content: 'NIKE';
+    font-size: 10em;
+    font-weight: 900;
+    bottom: 0;
+    color: var(--corCard);
+    opacity: 0.03;
+}
+
+.container img {
+    position: absolute;
+    left: -275px;
+    top: -5%;
+    height: 120%;
+    width: 100%;
+    object-fit: cover;
+    transform: rotate(20deg);
+    filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.4));
+}
+
+.container .cardDetails {
+    width: 50%;
+}
+
+.container .cardDetails .content {
+    padding: 50px;
+}
+
+.container .cardDetails .content h2 {
+    font-size: 2.2em;
+    text-transform: uppercase;
+    color: #f23778;
+}
+
+.container .cardDetails .content h2 span {
+    display: block;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 0.45em;
+    letter-spacing: 3px;
+    color: var(--corFont);
+    line-height: -3px;
+    opacity: 0.7;
+}
+
+.container .cardDetails .content p {
+    font-size: 0.9em;
+    text-align: justify;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.container .cardDetails .content .buying {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 35px;
+}
+.container .cardDetails .content .buying h3 {
+    font-size: 1.8em;
+    opacity: 0.7;
+}
+
+.container .cardDetails .content .buying button {
+    border: none;
+    padding: 10px 15px;
+    color: var(--corCard);
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--corPrincipal);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+}
+
+.container .cardDetails .content .buying button:hover {
+    background-color: var(--corFont);
+}
+
+@media only screen and (max-width: 830px) {
+    body {
+        padding: 0 30px;
+    }
+
+    .container {
+        max-width: 700px;
+        height: 700px;
+        flex-direction: column;
+    }
+
+    .container .imgBox,
+    .container .cardDetails {
+        width: 100%;
+        height: 60%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .container img {
+        height: 70%;
+        left: 0;
+        top: -30px;
+        transform: rotate(40deg);
+    }
+
+    .container .imgBox::after {
+        font-size: 25vw;
+        left: 5%;
+        top: -30px;
+    }
+}
