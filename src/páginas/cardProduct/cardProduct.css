@@ -24,7 +24,7 @@ body {
     position: relative;
     background-color: var(--corCard);
     max-width: 800px;
-    height: 500px;
+    height: max-content;
     display: flex;
     border-radius: 10px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
@@ -108,13 +108,13 @@ body {
     color: var(--corCard);
     cursor: pointer;
     border-radius: 5px;
-    background-color: var(--corPrincipal);
+    background-color: #f23778;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     transition: 0.3s ease;
 }
 
 .container .cardDetails .content .buying button:hover {
-    background-color: var(--corFont);
+    background-color: #8b508d;
 }
 
 @media only screen and (max-width: 830px) {

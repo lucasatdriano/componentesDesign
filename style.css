@@ -1,0 +1,54 @@
+:root {
+    --corPrincipal: #d2d2f1;
+    --corSecundaria: #553647;
+    --corBackground: #161623;
+    --corFont: #151516;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-color: var(--corBackground);
+    color: var(--corPrincipal);
+    display: grid;
+    height: 100svh;
+    place-content: center;
+    font-size: 2.5em;
+}
+
+section {
+    width: 40vw;
+    height: max-content;
+    background-color: var(--corPrincipal);
+    color: var(--corFont);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+section .logo {
+    font-size: 2.8rem;
+}
+
+section .link {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 10px;
+    padding: 5px 35px;
+    width: 50%;
+    text-decoration: none;
+    color: var(--corFont);
+    border-radius: 15px;
+    transition: 0.2s ease;
+}
+
+section .link:hover {
+    background-color: rgb(149, 148, 156);
+}

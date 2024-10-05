@@ -1,6 +1,7 @@
 :root {
     --corPrincipal: #f0eded;
     --corSecundaria: #553647;
+    --corBackground: #161623;
 }
 
 * {
@@ -11,9 +12,12 @@
 }
 
 section {
+    background-color: var(--corBackground);
+    color: var(--corPrincipal);
     display: grid;
     height: 100svh;
     place-content: center;
+    font-size: 2.5em;
 }
 
 .modalContainer {
