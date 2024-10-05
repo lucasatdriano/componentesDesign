@@ -129,7 +129,7 @@ main {
 
 main .card {
     background: var(--corHeader);
-    padding: 10px 10px 5px;
+    padding: 10px;
     border-radius: 10px;
     width: 250px;
 }
@@ -147,6 +147,7 @@ main .card .name {
 
 main .card .content {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 50px;
 }
@@ -160,6 +161,7 @@ main .card .content .price {
 main .card .content .directional {
     display: flex;
     gap: 5px;
+    padding-right: 10px;
 }
 
 main .card .content .directional button {
@@ -168,6 +170,7 @@ main .card .content .directional button {
     width: max-content;
     border-radius: 5px;
     height: 35px;
+    font-size: 1rem;
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -181,9 +184,8 @@ main .card .content .directional details summary {
 }
 
 main .card .content .directional details summary .imgElipse {
-    border: 1px solid #aba7a766;
     font-size: 1.8rem;
-    padding: 2.5px 15px;
+    padding: 0 7px;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s ease;
